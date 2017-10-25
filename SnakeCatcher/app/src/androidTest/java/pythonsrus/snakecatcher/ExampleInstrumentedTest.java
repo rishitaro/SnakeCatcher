@@ -1,4 +1,4 @@
-package pythonsrus.snakecatcherapp;
+package pythonsrus.snakecatcher;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("pythonsrus.snakecatcherapp", appContext.getPackageName());
+        assertEquals("pythonsrus.snakecatcher", appContext.getPackageName());
     }
 }

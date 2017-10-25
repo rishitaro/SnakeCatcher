@@ -1,4 +1,4 @@
-package pythonsrus.snakecatcherapp;
+package pythonsrus.snakecatcher;
 
 import org.junit.Test;
 
