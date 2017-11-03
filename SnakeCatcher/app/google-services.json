@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "314538874341",
+    "firebase_url": "https://snakecatcher-f10f6.firebaseio.com",
+    "project_id": "snakecatcher-f10f6",
+    "storage_bucket": "snakecatcher-f10f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:314538874341:android:cb85ad951dbee10d",
+        "android_client_info": {
+          "package_name": "pythonsrus.snakecatcher"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "314538874341-pfkrhjkn469h7sta06tor2gcni08qltb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pythonsrus.snakecatcher",
+            "certificate_hash": "07909623b284a3d87b3b87fbed109df820977590"
+          }
+        },
+        {
+          "client_id": "314538874341-mgbr14bvv9a9tr82svl79n2nrile2mau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd-8m2SddkFyqGOa492wZb5_IyCklrsZA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "314538874341-mgbr14bvv9a9tr82svl79n2nrile2mau.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
