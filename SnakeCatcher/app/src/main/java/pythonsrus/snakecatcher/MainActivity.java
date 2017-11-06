@@ -43,10 +43,10 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 if (mPreview.isRecording()) {
                     mPreview.stopRecording(mediaPreview);
-                    buttonCaptureVideo.setText("录像");
+                    buttonCaptureVideo.setText("Recording");
                 }else{
                     if(mPreview.startRecording()) {
-                        buttonCaptureVideo.setText("停止");
+                        buttonCaptureVideo.setText("Stop");
                     }
                 }
             }
