@@ -1,7 +1,7 @@
 package pythonsrus.snakecatcher;
 
 /**
- * Created by Benson on 11/5/17.
+ * Created by Jinxuan on 11/5/17.
  */
 
 import android.app.Activity;
