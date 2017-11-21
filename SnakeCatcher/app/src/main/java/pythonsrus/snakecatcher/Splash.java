@@ -18,7 +18,7 @@ public class Splash extends AppCompatActivity {
                 startActivity(new Intent(Splash.this, Main2Activity.class));
                 finish();
             }
-        }, secondsDelayed *1000);
+        },  *1000);
     }
 }
 
