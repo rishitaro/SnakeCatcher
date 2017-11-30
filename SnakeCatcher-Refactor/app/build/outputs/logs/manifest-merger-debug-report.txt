@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-26:12
+ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-28:12
 MERGED from [com.google.android.gms:play-services-auth:11.4.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.4.0.aar/d35caa9b1e322bcf69423f77f2f8cdd7/AndroidManifest.xml:16:1-26:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/82281a9f3628075d21389136609262ce/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/655ab5798a95707bf2dbbedf7c33a39a/AndroidManifest.xml:2:1-11:12
@@ -21,25 +21,25 @@ MERGED from [com.android.support:support-media-compat:26.1.0] /Users/rishitaroy/
 MERGED from [com.android.support:support-core-utils:26.1.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/77a35a53ff08c9ab9886055cc4a27abc/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/0b18fc823fe20edb795b6adb9939d508/AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/9a2f00a4cfa3fc7a28da2c441e25af06/AndroidManifest.xml:17:1-30:12
-INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-28:12
 	package
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:3:5-47
-		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:3:5-47
+		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-26:12
-		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-28:12
+		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-26:12
-		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:1-28:12
+		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:5:5-24:19
+ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:5:5-26:19
 MERGED from [com.google.android.gms:play-services-auth:11.4.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.4.0.aar/d35caa9b1e322bcf69423f77f2f8cdd7/AndroidManifest.xml:19:5-25:19
 MERGED from [com.google.android.gms:play-services-auth:11.4.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.4.0.aar/d35caa9b1e322bcf69423f77f2f8cdd7/AndroidManifest.xml:19:5-25:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/82281a9f3628075d21389136609262ce/AndroidManifest.xml:25:5-29:19
@@ -71,55 +71,63 @@ MERGED from [com.android.support:support-compat:26.1.0] /Users/rishitaroy/.gradl
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/9a2f00a4cfa3fc7a28da2c441e25af06/AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/9a2f00a4cfa3fc7a28da2c441e25af06/AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:8:9-41
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:9:9-54
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:7:9-43
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:11:9-40
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:11:9-40
 activity#pythonsrus.snakecatcher_refactor.MainActivity
-ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:12:9-18:20
+ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:12:9-18:20
 	android:name
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:12:19-47
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:12:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:13:13-17:29
+ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:13:13-17:29
 action#android.intent.action.MAIN
-ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:14:17-69
+ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:14:17-69
 	android:name
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:14:25-66
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:14:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:16:17-77
+ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:16:17-77
 	android:name
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:16:27-74
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:16:27-74
 activity#pythonsrus.snakecatcher_refactor.CameraPreview
-ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:19:9-51
+ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:19:9-51
 	android:name
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:19:19-48
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:19:19-48
 activity#pythonsrus.snakecatcher_refactor.SignIn
-ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:20:9-44
+ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:20:9-44
 	android:name
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:20:19-41
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:20:19-41
 activity#pythonsrus.snakecatcher_refactor.Camera
-ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:21:9-44
+ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:21:9-44
 	android:name
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:21:19-41
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:21:19-41
 activity#pythonsrus.snakecatcher_refactor.SettingsFragment
-ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:22:9-54
+ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:22:9-54
 	android:name
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:22:19-51
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:22:19-51
 activity#pythonsrus.snakecatcher_refactor.ShowPhotoVideo
-ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:23:9-61
+ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:23:9-52
 	android:name
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:23:19-49
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:23:19-49
+activity#pythonsrus.snakecatcher_refactor.GMAILSender
+ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:24:9-49
+	android:name
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:24:19-46
+activity#pythonsrus.snakecatcher_refactor.JSSEProvider
+ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:25:9-59
+	android:name
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml:25:19-47
 uses-sdk
-INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
-INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
 MERGED from [com.google.android.gms:play-services-auth:11.4.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.4.0.aar/d35caa9b1e322bcf69423f77f2f8cdd7/AndroidManifest.xml:17:5-43
 MERGED from [com.google.android.gms:play-services-auth:11.4.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.4.0.aar/d35caa9b1e322bcf69423f77f2f8cdd7/AndroidManifest.xml:17:5-43
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/82281a9f3628075d21389136609262ce/AndroidManifest.xml:21:5-23:78
@@ -154,18 +162,18 @@ MERGED from [com.android.support:support-compat:26.1.0] /Users/rishitaroy/.gradl
 MERGED from [com.android.support:support-compat:26.1.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/0b18fc823fe20edb795b6adb9939d508/AndroidManifest.xml:21:5-23:58
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/9a2f00a4cfa3fc7a28da2c441e25af06/AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/9a2f00a4cfa3fc7a28da2c441e25af06/AndroidManifest.xml:20:5-22:41
-INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
-INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:26.1.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/82281a9f3628075d21389136609262ce/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
-		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+		ADDED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/AndroidManifest.xml
 activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
 ADDED from [com.google.android.gms:play-services-auth:11.4.0] /Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.4.0.aar/d35caa9b1e322bcf69423f77f2f8cdd7/AndroidManifest.xml:20:9-189
 	android:excludeFromRecents

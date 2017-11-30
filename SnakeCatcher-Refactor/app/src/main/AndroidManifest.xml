@@ -20,7 +20,9 @@
         <activity android:name=".SignIn" />
         <activity android:name=".Camera" />
         <activity android:name=".SettingsFragment" />
-        <activity android:name=".ShowPhotoVideo"></activity>
+        <activity android:name=".ShowPhotoVideo" />
+        <activity android:name=".GMAILSender" />
+        <activity android:name=".JSSEProvider"></activity>
     </application>
 
 </manifest>
