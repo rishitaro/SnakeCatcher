@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/src/debug/shaders"/></dataSet></merger>
