@@ -1,0 +1,4 @@
+#Wed Nov 29 17:51:44 PST 2017
+base.0=/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/build/intermediates/transforms/dexMerger/debug/10
+renamed.0=classes.dex
+file.0=/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher-Refactor/app/build/intermediates/transforms/dexMerger/debug/10/classes.dex
