@@ -29,6 +29,8 @@
         <activity android:name="pythonsrus.snakecatcher_refactor.Camera" />
         <activity android:name="pythonsrus.snakecatcher_refactor.SettingsFragment" />
         <activity android:name="pythonsrus.snakecatcher_refactor.ShowPhotoVideo" />
+        <activity android:name="pythonsrus.snakecatcher_refactor.GMAILSender" />
+        <activity android:name="pythonsrus.snakecatcher_refactor.JSSEProvider" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"
