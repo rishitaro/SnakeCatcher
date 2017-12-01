@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="pythonsrus.snakecatcher_refactor">
 
     <application
@@ -23,9 +24,8 @@
         <activity android:name=".ShowPhotoVideo" />
         <activity android:name=".GMAILSender" />
         <activity android:name=".JSSEProvider" />
-        <activity
-            android:name=".ListView"
-            android:label="@string/title_activity_list_view"></activity>
+        <activity android:name=".HistoryView" />
+        <activity android:name=".Settings"></activity>
     </application>
 
 </manifest>

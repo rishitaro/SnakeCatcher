@@ -1,19 +1,26 @@
 package pythonsrus.snakecatcher_refactor;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
-import java.io.*;
 
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
-public class ListView extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.List;
+
+
+public class HistoryView extends AppCompatActivity {
 
     private TextView mTextMessage;
+    private FirebaseAuth mAuth;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -21,14 +28,16 @@ public class ListView extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
+                case R.id.navigation_camera:
                     mTextMessage.setText(R.string.title_camera);
+                    startActivity(new Intent(HistoryView.this, Camera.class));
                     return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_history);
+                case R.id.navigation_history:
+
                     return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_settings);
+                case R.id.navigation_settings:
+                    startActivity(new Intent(HistoryView.this, Settings.class));
+                    //mTextMessage.setText(R.string.title_settings);
                     return true;
             }
             return false;
@@ -38,16 +47,15 @@ public class ListView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_view);
+        setContentView(R.layout.activity_history_view);
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        mAuth = FirebaseAuth.getInstance();
 
-        StorageReference mStorageRef;
-        mStorageRef = FirebaseStorage.getInstance().getReference();
+        //Click Listere
 
-        //Uri file = Uri.fromFile(new File(""));
 
     }
 

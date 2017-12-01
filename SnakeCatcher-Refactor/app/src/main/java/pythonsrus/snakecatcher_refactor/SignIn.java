@@ -66,7 +66,15 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
             // If the user's cached credentials are valid, the OptionalPendingResult will be "done"
             // and the GoogleSignInResult will be available instantly.
             GoogleSignInResult result = opr.get();
+            Intent i = new Intent(getApplicationContext(), Settings.class);
+            GoogleSignInAccount account = result.getSignInAccount();
+            String name = account.getDisplayName();
+            String email = account.getEmail();
+            i.putExtra("email", email);
+            i.putExtra("name", name);
             handleResult(result);
+
+
         } else {
             // If the user has not previously signed in on this device or the sign-in has expired,
             // this asynchronous branch will attempt to sign in the user silently.  Cross-device
@@ -156,6 +164,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
     }
 
 
+
     private void handleResult(GoogleSignInResult result)
     {
         if(result.isSuccess()) {
@@ -187,7 +196,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
     private void updateUI(boolean isLogin)
     {
         if(isLogin) {
-            startActivity(new Intent(SignIn.this, ListView.class));
+            startActivity(new Intent(SignIn.this, HistoryView.class));
         } else {
             Prof_Section.setVisibility(View.GONE);
             SignIn.setVisibility(View.VISIBLE);
