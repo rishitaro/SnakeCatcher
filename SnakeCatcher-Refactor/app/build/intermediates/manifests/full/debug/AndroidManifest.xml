@@ -42,9 +42,8 @@
         <activity android:name="pythonsrus.snakecatcher_refactor.ShowPhotoVideo" />
         <activity android:name="pythonsrus.snakecatcher_refactor.GMAILSender" />
         <activity android:name="pythonsrus.snakecatcher_refactor.JSSEProvider" />
-        <activity
-            android:name="pythonsrus.snakecatcher_refactor.ListView"
-            android:label="@string/title_activity_list_view" />
+        <activity android:name="pythonsrus.snakecatcher_refactor.HistoryView" />
+        <activity android:name="pythonsrus.snakecatcher_refactor.Settings" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"

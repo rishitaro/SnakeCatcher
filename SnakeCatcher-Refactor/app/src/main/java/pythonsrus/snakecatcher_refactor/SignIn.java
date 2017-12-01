@@ -175,17 +175,17 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
             Name.setText(name);
             Email.setText(email);
             //Glide.with(this).load(imG_url).into(Prof_pic);
-            updateUI(true);
-
+            new Thread(new Runnable() {
+                public void run() {
                     try {
-                        GMAILSender sender = new GMAILSender(
-                                "snakecatcherapp@gmail.com",
-                                "cmps115struggle");
-                        sender.sendMail("Test Mail", "This mail has been sent from android app along with attachment", "snakecatcherapp@gmail.com", "riroy@ucsc.edu");
-                        System.out.print("Sent picture");
+                        GMAILSender sender = new GMAILSender("snakecatcherapp@gmail.com", "cmps115struggle");
+                        sender.sendMail("Test mail", "This mail has been sent from android app", "snakecatcherapp@gmail.com", email);
                     } catch (Exception e) {
-                        Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
                     }
+                }
+            }).start();
+            updateUI(true);
         } else {
             updateUI(false);
         }
