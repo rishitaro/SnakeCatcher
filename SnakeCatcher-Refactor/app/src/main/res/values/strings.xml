@@ -53,4 +53,8 @@
     <!-- Server Client ID.  This should be a valid Web OAuth 2.0 Client ID obtained
          from https://console.developers.google.com/ -->
     <string name="server_client_id">546506255985-hlgdsf9hvdipdldsumh757m82pimb725.apps.googleusercontent.com</string>
+    <string name="title_activity_list_view">ListView</string>
+    <string name="title_camera">Camera</string>
+    <string name="title_history">History</string>
+    <string name="title_settings">Settings</string>
 </resources>

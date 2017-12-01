@@ -1,14 +1,18 @@
 package pythonsrus.snakecatcher_refactor;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.Auth;
@@ -18,6 +22,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
 
@@ -27,9 +32,11 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
     private Button SignOut;
     private SignInButton SignIn;
     private TextView Name,Email;
-    private ImageView Prof_pic;
+    //private ImageView Prof_pic;
     private GoogleApiClient googleApiClient;
     private static final int REQ_CODE = 9001;
+    private String email;
+    private ProgressDialog mProgressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +47,73 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
         SignIn = (SignInButton)findViewById(R.id.bn_login);
         Name = (TextView)findViewById(R.id.name);
         Email = (TextView)findViewById(R.id.email);
-        Prof_pic = (ImageView)findViewById(R.id.prof_pic);
+        //Prof_pic = (ImageView)findViewById(R.id.prof_pic);
         SignIn.setOnClickListener(this);
         SignOut.setOnClickListener(this);
         Prof_Section.setVisibility(View.GONE);
+        SignIn.setVisibility(View.GONE);
         GoogleSignInOptions signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         googleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this,this).addApi(Auth.GOOGLE_SIGN_IN_API,signInOptions).build();
 
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+
+        OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(googleApiClient);
+        if (opr.isDone()) {
+            // If the user's cached credentials are valid, the OptionalPendingResult will be "done"
+            // and the GoogleSignInResult will be available instantly.
+            GoogleSignInResult result = opr.get();
+            handleResult(result);
+        } else {
+            // If the user has not previously signed in on this device or the sign-in has expired,
+            // this asynchronous branch will attempt to sign in the user silently.  Cross-device
+            // single sign-on will occur in this branch.
+
+            showProgressDialog();
+            SignIn.setVisibility(View.VISIBLE);
+            opr.setResultCallback(new ResultCallback<GoogleSignInResult>() {
+                @Override
+                public void onResult(GoogleSignInResult googleSignInResult) {
+                    SignIn.setVisibility(View.VISIBLE);
+                    hideProgressDialog();
+                    handleResult(googleSignInResult);
+                }
+            });
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        hideProgressDialog();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mProgressDialog != null) {
+            mProgressDialog.dismiss();
+        }
+    }
+
+    private void showProgressDialog() {
+        if (mProgressDialog == null) {
+            mProgressDialog = new ProgressDialog(this);
+            mProgressDialog.setMessage(getString(R.string.loading));
+            mProgressDialog.setIndeterminate(true);
+        }
+
+        mProgressDialog.show();
+    }
+
+
+    private void hideProgressDialog() {
+        if (mProgressDialog != null && mProgressDialog.isShowing()) {
+            mProgressDialog.hide();
+        }
     }
 
     @Override
@@ -91,21 +158,26 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
 
     private void handleResult(GoogleSignInResult result)
     {
-        if(result.isSuccess())
-        {
+        if(result.isSuccess()) {
             GoogleSignInAccount account = result.getSignInAccount();
             String name = account.getDisplayName();
-            String email = account.getEmail();
-            String imG_url = account.getPhotoUrl().toString();
+            email = account.getEmail();
+            //String imG_url = account.getPhotoUrl().toString();
             Name.setText(name);
             Email.setText(email);
-            Glide.with(this).load(imG_url).into(Prof_pic);
+            //Glide.with(this).load(imG_url).into(Prof_pic);
             updateUI(true);
-        }
 
-        else
-
-        {
+                    try {
+                        GMAILSender sender = new GMAILSender(
+                                "snakecatcherapp@gmail.com",
+                                "cmps115struggle");
+                        sender.sendMail("Test Mail", "This mail has been sent from android app along with attachment", "snakecatcherapp@gmail.com", "riroy@ucsc.edu");
+                        System.out.print("Sent picture");
+                    } catch (Exception e) {
+                        Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_LONG).show();
+                    }
+        } else {
             updateUI(false);
         }
 
@@ -114,15 +186,9 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
 
     private void updateUI(boolean isLogin)
     {
-        if(isLogin)
-        {
-            Prof_Section.setVisibility(View.VISIBLE);
-            SignIn.setVisibility(View.GONE);
-
-        }
-
-        else
-        {
+        if(isLogin) {
+            startActivity(new Intent(SignIn.this, ListView.class));
+        } else {
             Prof_Section.setVisibility(View.GONE);
             SignIn.setVisibility(View.VISIBLE);
         }

@@ -22,7 +22,10 @@
         <activity android:name=".SettingsFragment" />
         <activity android:name=".ShowPhotoVideo" />
         <activity android:name=".GMAILSender" />
-        <activity android:name=".JSSEProvider"></activity>
+        <activity android:name=".JSSEProvider" />
+        <activity
+            android:name=".ListView"
+            android:label="@string/title_activity_list_view"></activity>
     </application>
 
 </manifest>

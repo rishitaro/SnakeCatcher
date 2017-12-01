@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "738902424723",
+    "firebase_url": "https://snakecatcherrefactor.firebaseio.com",
+    "project_id": "snakecatcherrefactor",
+    "storage_bucket": "snakecatcherrefactor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738902424723:android:335f35fb7f063a63",
+        "android_client_info": {
+          "package_name": "pythonsrus.snakecatcher_refactor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738902424723-brjmggieck7q5eg3aajsgec4sd3s1iik.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pythonsrus.snakecatcher_refactor",
+            "certificate_hash": "07909623b284a3d87b3b87fbed109df820977590"
+          }
+        },
+        {
+          "client_id": "738902424723-kvj5tf1sa2l1njo76acvo830hfpslrgi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb2bc3WTK0PY6AAJiWycIaOiOqTq6QrT0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738902424723-kvj5tf1sa2l1njo76acvo830hfpslrgi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

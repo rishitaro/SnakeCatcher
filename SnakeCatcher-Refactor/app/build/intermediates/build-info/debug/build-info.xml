@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="x86"
-    api-level="25"
+    api-level="27"
     build-mode="FULL"
     density="420dpi"
     format="10"
     plugin-version="3.0.0"
-    timestamp="1512104097415"
+    timestamp="1512117948351"
     token="-6044697882130936085"
     verifier="FULL_BUILD_REQUESTED" >
 
@@ -18,7 +18,7 @@
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="91" />
+        duration="161" />
     <task
         name="verifier"
         duration="0" />
@@ -26,9 +26,6 @@
     <artifact
         location="/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
-    <artifact
-        location="/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/build/outputs/apk/debug/app-debug.apk"
-        type="SPLIT_MAIN" />
     <artifact
         location="/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
         type="SPLIT" />
@@ -59,17 +56,17 @@
     <artifact
         location="/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
+    <artifact
+        location="/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/build/outputs/apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1512104097415"
+        timestamp="1512117948351"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
-        <artifact
-            location="/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/build/outputs/apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
         <artifact
             location="/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
@@ -100,6 +97,9 @@
         <artifact
             location="/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/build/outputs/apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>
