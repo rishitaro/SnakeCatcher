@@ -7,12 +7,15 @@ A lot of people leave their things unattended in libraries etc. to get something
 ## Contents
 1. SnakeCatcher
 	- Android app source files
-2. Sprint Plans
+2. SnakeCatcher-Refactor
+   - Refactored SnakeCatcher to handle new build in Android Studio
+3. Documentation
 	- Teams sprint plans will be submitted here
+   - Additional documentation will also be here
 
 ## Authors
-- Zeno Nanon (Project Owner)
-- Benson Jiang
-- Cindy Tiet
-- Rishita Roy 
-- Justin Liu
+- Zeno Nanon (Project Owner) (znanon)
+- Benson Jiang (jjiang17)
+- Cindy Tiet (kytiet)
+- Rishita Roy (riroy)
+- Justin Liu (jliu67)
