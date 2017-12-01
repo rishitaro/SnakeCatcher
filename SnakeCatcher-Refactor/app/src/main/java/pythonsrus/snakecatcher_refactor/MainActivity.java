@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         int secondsDelayed = 3;
         new Handler().postDelayed(new Runnable() {
             public void run() {
-                startActivity(new Intent(MainActivity.this, Camera.class));
+                startActivity(new Intent(MainActivity.this, SignIn.class));
                 finish();
             }
         }, secondsDelayed*1000);

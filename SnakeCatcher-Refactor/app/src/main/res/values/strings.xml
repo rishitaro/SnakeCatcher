@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SnakeCatcher (refactor)</string>
+    <string name="app_name">SnakeCatcher2</string>
     <string name="title_text">Google Sign-In\nQuickstart</string>
 
     <!-- Sign-in status messages -->

@@ -38,9 +38,12 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     private Uri outputMediaFileUri;
     private String outputMediaFileType;
 
+
+
     public void takePicture(final ImageView view){
         mCamera.takePicture(null,null,new Camera.PictureCallback() {
             @Override
+
             public void onPictureTaken(byte[] data, Camera camera) {
                 File pictureFile = getOutputMediaFile(MEDIA_TYPE_IMAGE);
                 if (pictureFile == null) {
@@ -82,6 +85,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     public boolean isRecording(){
         return mMediaRecorder!=null;
     }
+
     public CameraPreview(Context context) {
         super(context);
         mHolder = getHolder();
