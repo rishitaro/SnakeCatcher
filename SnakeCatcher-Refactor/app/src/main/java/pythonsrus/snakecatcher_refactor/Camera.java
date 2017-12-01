@@ -61,7 +61,7 @@ public class Camera extends Activity {
     }
     private void initCamera(){
         mPreview = new CameraPreview(this);
-        FrameLayotut preview = (FrameLayout) findViewById(R.id.camera_preview);
+        FrameLayout preview = (FrameLayout) findViewById(R.id.camera_preview);
         preview.addView(mPreview);
 
         SettingsFragment.passCamera(mPreview.getCameraInstance());
