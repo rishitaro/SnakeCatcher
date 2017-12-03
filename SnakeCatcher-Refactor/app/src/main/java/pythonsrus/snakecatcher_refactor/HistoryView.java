@@ -33,7 +33,7 @@ public class HistoryView extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_camera:
-                    mTextMessage.setText(R.string.title_camera);
+                    //mTextMessage.setText(R.string.title_camera);
                     startActivity(new Intent(HistoryView.this, Camera.class));
                     return true;
                 case R.id.navigation_history:

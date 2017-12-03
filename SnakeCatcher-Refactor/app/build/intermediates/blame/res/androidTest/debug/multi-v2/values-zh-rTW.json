@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Zeno\\Downloads\\SnakeCatcher2.0\\SnakeCatcher\\SnakeCatcher-Refactor\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-zh-rTW\\values-zh-rTW.xml",
+            "outputFile": "/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Zeno\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.4.2.aar\\b9918bdecddb46ecddc171630a9edbb9\\res\\values-zh-rTW\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "289",
-                        "endColumns": "161",
-                        "endOffsets": "450"
-                    },
-                    "to": {
-                        "startLines": "28",
-                        "startColumns": "4",
-                        "startOffsets": "2818",
-                        "endColumns": "161",
-                        "endOffsets": "2975"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Zeno\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.4.2.aar\\f40f42e1817e6a2021d7b41cfb9ef137\\res\\values-zh-rTW\\values.xml",
+                    "source": "/Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/play-services-base-11.4.2.aar/c049a303c58e7a6cba7dd185e978e97a/res/values-zh-rTW/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Zeno\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9a5f5434bcaebb2213d64dbafd6ad3c7\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "source": "/Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/82281a9f3628075d21389136609262ce/res/values-zh-rTW/values-zh-rTW.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -52,6 +35,23 @@
                         "startOffsets": "105,200,307,430,523,623,705,802,910,986,1062,1140,1236,1332,1427,1524,1619,1719,1832,4104,4182",
                         "endColumns": "94,106,122,92,99,81,96,107,75,75,77,95,95,94,96,94,99,112,93,77,100",
                         "endOffsets": "195,302,425,518,618,700,797,905,981,1057,1135,1231,1327,1422,1519,1614,1714,1827,1921,4177,4278"
+                    }
+                },
+                {
+                    "source": "/Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.4.2.aar/63f427a593e1b8636004b4c6a00cafe8/res/values-zh-rTW/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "289",
+                        "endColumns": "161",
+                        "endOffsets": "450"
+                    },
+                    "to": {
+                        "startLines": "28",
+                        "startColumns": "4",
+                        "startOffsets": "2818",
+                        "endColumns": "161",
+                        "endOffsets": "2975"
                     }
                 }
             ]
