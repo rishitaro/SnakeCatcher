@@ -36,8 +36,10 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:4.1.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
     compile 'com.firebaseui:firebase-ui-storage:3.1.0'
+    compile 'com.firebaseui:firebase-ui-database:3.1.0'
     implementation files('libs/activation.jar')
 }
+
 
 
 apply plugin: 'com.google.gms.google-services'

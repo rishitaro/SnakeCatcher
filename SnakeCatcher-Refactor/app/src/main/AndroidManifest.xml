@@ -25,7 +25,8 @@
         <activity android:name=".GMAILSender" />
         <activity android:name=".JSSEProvider" />
         <activity android:name=".HistoryView" />
-        <activity android:name=".Settings"></activity>
+        <activity android:name=".Settings" />
+        <activity android:name=".HistoryItemView"></activity>
     </application>
 
 </manifest>
