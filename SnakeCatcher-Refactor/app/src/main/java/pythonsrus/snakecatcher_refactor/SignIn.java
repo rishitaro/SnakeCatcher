@@ -32,10 +32,10 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
     private Button SignOut;
     private SignInButton SignIn;
     private TextView Name,Email;
+    private String email;
     //private ImageView Prof_pic;
     private GoogleApiClient googleApiClient;
     private static final int REQ_CODE = 9001;
-    private String email;
     private ProgressDialog mProgressDialog;
 
     @Override
@@ -55,6 +55,12 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
         GoogleSignInOptions signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         googleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this,this).addApi(Auth.GOOGLE_SIGN_IN_API,signInOptions).build();
 
+//        String method = getIntent().getStringExtra("method");
+//        if(method != null){
+//            if(method.equals("signOut")){
+//                signOut();
+//            }
+//        }
     }
 
     @Override
@@ -62,16 +68,12 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
         super.onStart();
 
         OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(googleApiClient);
+
         if (opr.isDone()) {
             // If the user's cached credentials are valid, the OptionalPendingResult will be "done"
             // and the GoogleSignInResult will be available instantly.
+
             GoogleSignInResult result = opr.get();
-            Intent i = new Intent(getApplicationContext(), Settings.class);
-            GoogleSignInAccount account = result.getSignInAccount();
-            String name = account.getDisplayName();
-            String email = account.getEmail();
-            i.putExtra("email", email);
-            i.putExtra("name", name);
             handleResult(result);
 
 
@@ -126,18 +128,15 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
 
     @Override
     public void onClick(View v) {
-
         switch (v.getId())
         {
             case R.id.bn_login:
                 signIn();
                 break;
-
             case R.id.bn_logout:
                 signOut();
                 break;
         }
-
     }
 
     @Override
@@ -170,6 +169,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
         if(result.isSuccess()) {
             GoogleSignInAccount account = result.getSignInAccount();
             String name = account.getDisplayName();
+            String id_token = account.getIdToken();
             email = account.getEmail();
             //String imG_url = account.getPhotoUrl().toString();
             Name.setText(name);
@@ -185,17 +185,28 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
                     }
                 }
             }).start();
-            updateUI(true);
+
+
+
+            Intent i = new Intent(getApplicationContext(), HistoryView.class);
+
+            Log.v("SignIn", "name: " + name);
+            Log.v("SignIn", "email: " + email);
+            i.putExtra("email", email);
+            i.putExtra("name", name);
+            startActivity(i);
+            //updateUI(true);
         } else {
             updateUI(false);
         }
-
     }
 
 
     private void updateUI(boolean isLogin)
     {
         if(isLogin) {
+//            Prof_Section.setVisibility(View.VISIBLE);
+//            SignIn.setVisibility(View.GONE);
             startActivity(new Intent(SignIn.this, HistoryView.class));
         } else {
             Prof_Section.setVisibility(View.GONE);

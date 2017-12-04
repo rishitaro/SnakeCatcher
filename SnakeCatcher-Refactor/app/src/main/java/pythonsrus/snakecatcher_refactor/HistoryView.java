@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -40,8 +41,23 @@ public class HistoryView extends AppCompatActivity {
 
                     return true;
                 case R.id.navigation_settings:
-                    startActivity(new Intent(HistoryView.this, Settings.class));
-                    //mTextMessage.setText(R.string.title_settings);
+                    Bundle extras = getIntent().getExtras();
+                    String email, name = "";
+
+                    if(extras != null){
+                        email = extras.getString("email");
+                        name = extras.getString("name");
+                        Log.v("history", "name: " + name);
+                        Log.v("history", "email: " + email);
+
+                        Intent settings = new Intent(getApplicationContext(), Settings.class);
+                        settings.putExtra("email", email);
+                        settings.putExtra("name", name);
+                        startActivity(settings);
+                    }else{
+                        startActivity(new Intent(HistoryView.this, Settings.class));
+                    }
+
                     return true;
             }
             return false;
@@ -59,13 +75,10 @@ public class HistoryView extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mAuth.signInAnonymously();
 
-
-
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
         writeNewHistoryItem("test", "www.google.com");
 
-        //Click Listere
 
 
     }
