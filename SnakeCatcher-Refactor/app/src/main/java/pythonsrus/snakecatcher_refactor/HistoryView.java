@@ -122,8 +122,7 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
         writeNewHistoryItem(uid, "www.google.com");
 
         Query query = FirebaseDatabase.getInstance()
-                .getReference()
-                .child(uid)
+                .getReference(uid)
                 .limitToLast(50);
 
         FirebaseRecyclerOptions<HistoryItem> options =
@@ -154,23 +153,6 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
 
     }
 
-    public class ItemHolder extends RecyclerView.ViewHolder{
-
-        private final ImageView image;
-        private final TextView date;
-
-        public ItemHolder(View itemView) {
-            super(itemView);
-            image = (ImageView) itemView.findViewById(R.id.image);
-            date = (TextView) itemView.findViewById(R.id.date);
-        }
-
-        public void setDate(String d){
-            date.setText(d);
-        }
-
-
-    }
 
 
     @Override
@@ -181,7 +163,7 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
 
     private void writeNewHistoryItem(String uid, String uri){
         HistoryItem item = new HistoryItem(uid, uri);
-        databaseReference.child(uid).child(item.passHumanTime()).setValue(item);
+        databaseReference.child(uid).child(item.getDatetime().toString()).setValue(item);
     }
 
     @Override
