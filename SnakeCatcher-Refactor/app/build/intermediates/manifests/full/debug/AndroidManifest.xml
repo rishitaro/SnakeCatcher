@@ -8,6 +8,10 @@
         android:minSdkVersion="19"
         android:targetSdkVersion="26" />
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -28,7 +32,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="pythonsrus.snakecatcher_refactor.MainActivity" >
+        <activity
+            android:name="pythonsrus.snakecatcher_refactor.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,14 +42,20 @@
             </intent-filter>
         </activity>
         <activity android:name="pythonsrus.snakecatcher_refactor.CameraPreview" />
-        <activity android:name="pythonsrus.snakecatcher_refactor.SignIn" />
+        <activity
+            android:name="pythonsrus.snakecatcher_refactor.SignIn"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="pythonsrus.snakecatcher_refactor.Camera" />
         <activity android:name="pythonsrus.snakecatcher_refactor.SettingsFragment" />
         <activity android:name="pythonsrus.snakecatcher_refactor.ShowPhotoVideo" />
         <activity android:name="pythonsrus.snakecatcher_refactor.GMAILSender" />
         <activity android:name="pythonsrus.snakecatcher_refactor.JSSEProvider" />
-        <activity android:name="pythonsrus.snakecatcher_refactor.HistoryView" />
-        <activity android:name="pythonsrus.snakecatcher_refactor.Settings" />
+        <activity
+            android:name="pythonsrus.snakecatcher_refactor.HistoryView"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="pythonsrus.snakecatcher_refactor.Settings"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="pythonsrus.snakecatcher_refactor.HistoryItemView" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"

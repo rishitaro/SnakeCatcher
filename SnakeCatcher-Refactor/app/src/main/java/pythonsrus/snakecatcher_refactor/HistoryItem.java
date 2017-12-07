@@ -31,16 +31,24 @@ public class HistoryItem {
 
     }
 
-    public Long getDatetime(){
-        return datetime_epoch;
-    }
-
     private String getHumanTime(Long t){
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         return dateFormat.format(t);
     }
 
+    public Long getDatetime(){
+        return datetime_epoch;
+    }
+
     public String passHumanTime(){
         return datetime_human;
+    }
+
+    public String getUid(){
+        return uid;
+    }
+
+    public String getUri(){
+        return uri;
     }
 }

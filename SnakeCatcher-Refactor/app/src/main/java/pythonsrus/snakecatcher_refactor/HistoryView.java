@@ -1,7 +1,5 @@
 package pythonsrus.snakecatcher_refactor;
 
-import android.content.ClipData;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -14,39 +12,24 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
-
-import com.bumptech.glide.Glide;
-import com.firebase.ui.storage.images.FirebaseImageLoader;
+import com.firebase.ui.database.FirebaseListAdapter;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.OptionalPendingResult;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
-import com.firebase.ui.database.*;
-import com.firebase.ui.storage.images.FirebaseImageLoader;
-
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-
+import butterknife.BindView;
 
 import org.w3c.dom.Text;
-
 import java.util.List;
 
 
@@ -57,7 +40,12 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
     private FirebaseAuth mAuth;
     private DatabaseReference databaseReference;
     private GoogleApiClient mGoogleApiClient;
-    private RecyclerView recyclerView;
+    private FirebaseRecyclerAdapter mAdapter;
+
+    @BindView(R.id.db)
+    RecyclerView recyclerView;
+
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -84,6 +72,7 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
 
                         Intent settings = new Intent(getApplicationContext(), Settings.class);
                         settings.putExtra("email", email);
+                        settings.putExtra("email", email);
                         settings.putExtra("name", name);
                         startActivity(settings);
                     }else{
@@ -102,8 +91,7 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_history_view);
 
         mTextMessage = (TextView) findViewById(R.id.message);
-        recyclerView = (RecyclerView) findViewById(R.id.db_listview);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
@@ -121,44 +109,53 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
         databaseReference = FirebaseDatabase.getInstance().getReference();
         writeNewHistoryItem(uid, "www.google.com");
 
+        // Recycler View
+
+        recyclerView = (RecyclerView) findViewById(R.id.db);
+
+
         Query query = FirebaseDatabase.getInstance()
-                .getReference(uid)
+                .getReference()
+                .child(uid)
                 .limitToLast(50);
 
         FirebaseRecyclerOptions<HistoryItem> options =
                 new FirebaseRecyclerOptions.Builder<HistoryItem>()
-                        .setQuery(query, HistoryItem.class)
-                        .build();
+                    .setQuery(query, HistoryItem.class)
+                    .build();
 
-        FirebaseRecyclerAdapter adapter = new FirebaseRecyclerAdapter<HistoryItem, HistoryItemView>(options) {
+        mAdapter = new FirebaseRecyclerAdapter<HistoryItem, HistoryItemView>(options){
+
             @Override
             public HistoryItemView onCreateViewHolder(ViewGroup parent, int viewType) {
-                // Create a new instance of the ViewHolder, in this case we are using a custom
-                // layout called R.layout.message for each item
-                View view = LayoutInflater.from(parent.getContext())
-                        .inflate(R.layout.activity_history_view, parent, false);
-
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_history_item_view, parent, false);
                 return new HistoryItemView(view);
             }
 
             @Override
             protected void onBindViewHolder(HistoryItemView holder, int position, HistoryItem model) {
                 holder.bind(model);
-                Log.v("HistoryView", model.datetime_human);
+            }
+
+            @Override
+            public void onDataChanged(){
+                Log.v("historyview" , "what the fuck man");
             }
         };
 
-        recyclerView.setAdapter(adapter);
-
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(llm);
+        recyclerView.setAdapter(mAdapter);
 
     }
-
 
 
     @Override
     protected void onStart(){
         super.onStart();
         mGoogleApiClient.connect();
+        mAdapter.startListening();
     }
 
     private void writeNewHistoryItem(String uid, String uri){
@@ -172,7 +169,15 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
     }
 
     @Override
+    public void onStop() {
+        super.onStop();
+        mAdapter.stopListening();
+    }
+
+    @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
+
+
 }
