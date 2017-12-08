@@ -18,9 +18,7 @@ import android.util.Log;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
-import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 /**
@@ -150,8 +148,8 @@ public class StorageUpload extends MyBaseTaskService {
         // Hide the progress notification
         dismissProgressNotification();
 
-        // Make Intent to MainActivity
-        Intent intent = new Intent(this, MainActivity.class)
+        // Make Intent to Splash
+        Intent intent = new Intent(this, Splash.class)
                 .putExtra(EXTRA_DOWNLOAD_URL, downloadUrl)
                 .putExtra(EXTRA_FILE_URI, fileUri)
                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);

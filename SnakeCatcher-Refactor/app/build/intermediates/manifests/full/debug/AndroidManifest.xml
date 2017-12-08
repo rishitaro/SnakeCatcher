@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="19"
+        android:minSdkVersion="21"
         android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -31,10 +31,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name="pythonsrus.snakecatcher_refactor.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+        android:theme="@style/Theme.AppCompat" >
+        <activity android:name="pythonsrus.snakecatcher_refactor.Splash" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,21 +40,23 @@
             </intent-filter>
         </activity>
         <activity android:name="pythonsrus.snakecatcher_refactor.CameraPreview" />
-        <activity
-            android:name="pythonsrus.snakecatcher_refactor.SignIn"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="pythonsrus.snakecatcher_refactor.SignIn" />
         <activity android:name="pythonsrus.snakecatcher_refactor.Camera" />
         <activity android:name="pythonsrus.snakecatcher_refactor.SettingsFragment" />
         <activity android:name="pythonsrus.snakecatcher_refactor.ShowPhotoVideo" />
         <activity android:name="pythonsrus.snakecatcher_refactor.GMAILSender" />
         <activity android:name="pythonsrus.snakecatcher_refactor.JSSEProvider" />
-        <activity
-            android:name="pythonsrus.snakecatcher_refactor.HistoryView"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="pythonsrus.snakecatcher_refactor.Settings"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="pythonsrus.snakecatcher_refactor.HistoryView" />
+        <activity android:name="pythonsrus.snakecatcher_refactor.Settings" />
         <activity android:name="pythonsrus.snakecatcher_refactor.HistoryItemView" />
+        <activity android:name="pythonsrus.snakecatcher_refactor.MotionDetection" />
+
+        <service
+            android:name="pythonsrus.snakecatcher_refactor.MotionService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="pythonsrus.snakecatcher_refactor.MotionItemView" />
         <activity
             android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
             android:excludeFromRecents="true"

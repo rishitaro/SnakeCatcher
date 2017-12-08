@@ -18,7 +18,7 @@ public class Camera extends Activity {
     private CameraPreview mPreview;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash);
 
         initCamera();
         Button buttonSettings = (Button) findViewById(R.id.button_settings);

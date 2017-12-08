@@ -37,6 +37,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
     private GoogleApiClient googleApiClient;
     private static final int REQ_CODE = 9001;
     private ProgressDialog mProgressDialog;
+    private String TAG = "SignIn";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -179,7 +180,7 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
                 public void run() {
                     try {
                         GMAILSender sender = new GMAILSender("snakecatcherapp@gmail.com", "cmps115struggle");
-                        sender.sendMail("Test mail", "This mail has been sent from android app", "snakecatcherapp@gmail.com", email);
+                        //sender.sendMail("Test mail", "This mail has been sent from android app", "snakecatcherapp@gmail.com", email);
                     } catch (Exception e) {
                         Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
                     }
@@ -190,8 +191,8 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener,Go
 
             Intent i = new Intent(getApplicationContext(), HistoryView.class);
 
-            Log.v("SignIn", "name: " + name);
-            Log.v("SignIn", "email: " + email);
+            Log.v(TAG, "name: " + name);
+            Log.v(TAG, "email: " + email);
             i.putExtra("email", email);
             i.putExtra("name", name);
             startActivity(i);
