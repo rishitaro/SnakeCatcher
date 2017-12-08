@@ -13,8 +13,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.firebase.ui.database.FirebaseListAdapter;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.auth.api.Auth;
@@ -29,15 +27,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import butterknife.BindView;
 
-import org.w3c.dom.Text;
-import java.util.List;
-
 
 public class HistoryView extends AppCompatActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener{
 
-    private TextView mTextMessage;
-
-    private FirebaseAuth mAuth;
+    //private TextView mTextMessage;
     private DatabaseReference databaseReference;
     private GoogleApiClient mGoogleApiClient;
     private FirebaseRecyclerAdapter mAdapter;
@@ -53,7 +46,6 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_view);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
