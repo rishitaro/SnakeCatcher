@@ -5,7 +5,7 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
@@ -14,27 +14,32 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-                  android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/Theme.AppCompat">
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".CameraPreview" />
-        <activity android:name=".SignIn"
-                  android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".SignIn" />
         <activity android:name=".Camera" />
         <activity android:name=".SettingsFragment" />
         <activity android:name=".ShowPhotoVideo" />
         <activity android:name=".GMAILSender" />
         <activity android:name=".JSSEProvider" />
-        <activity android:name=".HistoryView"
-                  android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Settings"
-                  android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".HistoryItemView"></activity>
+        <activity android:name=".HistoryView" />
+        <activity android:name=".Settings" />
+        <activity android:name=".HistoryItemView" />
+        <activity android:name=".MotionDetection" />
+
+        <service
+            android:name=".MotionService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".MotionItemView"></activity>
     </application>
 
 </manifest>
