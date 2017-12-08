@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -12,7 +13,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.auth.api.Auth;
@@ -21,7 +22,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.OptionalPendingResult;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
@@ -41,6 +41,8 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
     // Bind Views
     @BindView(R.id.db)
     RecyclerView recyclerView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,9 +72,11 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
         llm.setReverseLayout(true);
         llm.setStackFromEnd(true);
 
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), llm.getOrientation());
         // Set recyclerview linear layout manager and adapter
         recyclerView.setLayoutManager(llm);
         recyclerView.setAdapter(mAdapter);
+        recyclerView.addItemDecoration(dividerItemDecoration);
 
     }
 
@@ -179,12 +183,28 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
     }
 
 
-
-
     private void writeNewLogInItem(String uid, String uri){
         Log.v(TAG, "In writeNewLogInItem()");
-        HistoryItem item = new HistoryItem(uid, uri);
+        LogInItem item = new LogInItem(uid, uri);
         databaseReference.child(uid).child("login activity").child(item.getDatetime().toString()).setValue(item);
+    }
+
+
+
+    class userInfo{
+
+        String uid;
+        String email;
+        String name;
+        String profPicUrl;
+
+        public void userInfo(GoogleSignInResult result) {
+            this.uid = result.getSignInAccount().getId();
+            this.email = result.getSignInAccount().getEmail();
+            this.name = result.getSignInAccount().getDisplayName();
+            this.profPicUrl = result.getSignInAccount().getPhotoUrl().toString();
+        }
+
     }
 
 

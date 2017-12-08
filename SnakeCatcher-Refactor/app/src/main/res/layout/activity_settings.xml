@@ -17,6 +17,12 @@ tools:context="pythonsrus.snakecatcher_refactor.Settings">
     android:orientation="vertical">
 
 
+    <ImageView
+        android:id="@+id/imgProfilePic"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_star" />
+
     <TextView
         android:id="@+id/name"
         android:layout_width="match_parent"
@@ -37,7 +43,7 @@ tools:context="pythonsrus.snakecatcher_refactor.Settings">
 
     <Button
         android:id="@+id/bn_logout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LogOut Google Account" />
 

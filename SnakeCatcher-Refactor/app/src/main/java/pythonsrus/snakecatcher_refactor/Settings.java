@@ -1,6 +1,7 @@
 package pythonsrus.snakecatcher_refactor;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +10,11 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
@@ -22,6 +27,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener,
     private Button SignOut;
     private TextView Name,Email;
     private GoogleApiClient mGoogleApiClient;
+    private ImageView imgProfilePic;
     String uid = "";
     String email = "";
 
@@ -40,6 +46,8 @@ public class Settings extends AppCompatActivity implements View.OnClickListener,
         SignOut = (Button)findViewById(R.id.bn_logout);
         Name = (TextView)findViewById(R.id.name);
         Email = (TextView)findViewById(R.id.email);
+        imgProfilePic = (ImageView)findViewById(R.id.imgProfilePic);
+
 
         SignOut.setOnClickListener(this);
 
@@ -50,13 +58,27 @@ public class Settings extends AppCompatActivity implements View.OnClickListener,
         mGoogleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this,this).addApi(Auth.GOOGLE_SIGN_IN_API,signInOptions).build();
 
         OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(mGoogleApiClient);
+
         String name = "";
+        String img_url = "";
 
         if(opr.isDone()){
             GoogleSignInResult result = opr.get();
             name = result.getSignInAccount().getDisplayName();
+            if (result.getSignInAccount().getPhotoUrl() != null){
+                img_url = result.getSignInAccount().getPhotoUrl().toString();
+            }
             email = result.getSignInAccount().getEmail();
             uid = result.getSignInAccount().getId();
+
+            Glide.with(getApplicationContext()).load(img_url)
+                    .apply(new RequestOptions()
+                        .placeholder(R.drawable.ic_person_black_24dp))
+                    .thumbnail(0.5f)
+                    .apply(RequestOptions.circleCropTransform())
+                    .into(imgProfilePic);
+
+
         }
 
         Name.setText(name);

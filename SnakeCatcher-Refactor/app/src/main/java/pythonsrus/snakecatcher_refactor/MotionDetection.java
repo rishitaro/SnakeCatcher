@@ -90,23 +90,25 @@ public class MotionDetection extends Activity {
                 task[0].cancel(true);
 
                 if (service.didItMove()){
+
                     new Thread(new Runnable() {
                         public void run() {
                             try {
                                 GMAILSender sender = new GMAILSender("snakecatcherapp@gmail.com", "cmps115struggle");
-                                sender.sendMail("Device Final Location",  "Hi Friend," +
-                                                "\nSnakeCatcher detected movement on your device; this is a link to where the device was when the session was ended:" +
-                                                "\nhttps://www.google.com/maps/search/?api=1&query="+latitude + "," +longitude+"\nBest,\nSnakeCatcher",
-                                                "snakecatcherapp@gmail.com",
-                                                email );
+                                sender.sendMail("Motion Detected!",
+                                        "Hello Friend, \n \nThis is an email notification to let you know that your phone was moved during an active motion detecting session. \n" +
+                                                "The following is a link to where the device was when the session ended:" +
+                                                "\nhttps://www.google.com/maps/search/?api=1&query="+latitude + "," +longitude+ "\n\n" +
+                                                "Best, \nSnakeCatcher ",
+                                        "snakecatcherapp@gmail.com",
+                                        email);
                             } catch (Exception e) {
                                 Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
                             }
                         }
                     }).start();
+
                 }
-
-
 
                 task[0] = new ServiceTask();
                 textView.setText("Click START to begin another session");
@@ -155,20 +157,6 @@ public class MotionDetection extends Activity {
                 //Start monitoring
                 if (service!=null && service.didItMove()) {
                     Log.e(TAG, "doInBackground: has move");
-
-                    // Send email first time it moves
-                    if (count == 0){
-                        new Thread(new Runnable() {
-                            public void run() {
-                                try {
-                                    GMAILSender sender = new GMAILSender("snakecatcherapp@gmail.com", "cmps115struggle");
-                                    sender.sendMail("Motion Detected!", "Hello Friend, \n \nThis is an email notification to let you know that your phone was moved during an active motion detecting session.\n\nBest, \nSnakeCatcher ", "snakecatcherapp@gmail.com", email);
-                                } catch (Exception e) {
-                                    Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        }).start();
-                    }
 
                     textView.post(new Runnable() {
                         @Override

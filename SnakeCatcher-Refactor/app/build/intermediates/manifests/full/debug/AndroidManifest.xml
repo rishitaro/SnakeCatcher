@@ -46,11 +46,18 @@
         <activity android:name="pythonsrus.snakecatcher_refactor.ShowPhotoVideo" />
         <activity android:name="pythonsrus.snakecatcher_refactor.GMAILSender" />
         <activity android:name="pythonsrus.snakecatcher_refactor.JSSEProvider" />
-        <activity android:name="pythonsrus.snakecatcher_refactor.HistoryView" />
-        <activity android:name="pythonsrus.snakecatcher_refactor.Settings" />
-        <activity android:name="pythonsrus.snakecatcher_refactor.HistoryItemView" />
-        <activity android:name="pythonsrus.snakecatcher_refactor.MotionDetection" />
-
+        <activity
+            android:name="pythonsrus.snakecatcher_refactor.HistoryView"
+            android:label="Recent Activity" />
+/>
+        <activity
+            android:name="pythonsrus.snakecatcher_refactor.Settings"
+            android:label="Settings" />
+        <activity android:name="pythonsrus.snakecatcher_refactor.LogInItemView" />
+        <activity
+            android:name="pythonsrus.snakecatcher_refactor.MotionDetection"
+            android:label="Motion Detection" />
+/>
         <service
             android:name="pythonsrus.snakecatcher_refactor.MotionService"
             android:enabled="true"

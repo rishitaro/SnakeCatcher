@@ -29,10 +29,13 @@
         <activity android:name=".ShowPhotoVideo" />
         <activity android:name=".GMAILSender" />
         <activity android:name=".JSSEProvider" />
-        <activity android:name=".HistoryView" />
-        <activity android:name=".Settings" />
-        <activity android:name=".HistoryItemView" />
-        <activity android:name=".MotionDetection" />
+        <activity android:name=".HistoryView"
+            android:label="Recent Activity"/>/>
+        <activity android:name=".Settings"
+            android:label="Settings"/>
+        <activity android:name=".LogInItemView" />
+        <activity android:name=".MotionDetection"
+            android:label="Motion Detection"/>/>
 
         <service
             android:name=".MotionService"
