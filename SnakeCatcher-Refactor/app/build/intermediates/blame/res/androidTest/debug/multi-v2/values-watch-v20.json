@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "C:\\Users\\Zeno\\Downloads\\SnakeCatcher2.0\\SnakeCatcher\\SnakeCatcher-Refactor\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/Users/rishitaroy/.gradle/caches/transforms-1/files-1.1/play-services-auth-11.4.2.aar/e61e2474ea45ed11fc4ad5ce25e8a298/res/values-watch-v20/values.xml",
+                    "source": "C:\\Users\\Zeno\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-auth-11.4.2.aar\\1fb758e65143b66c89070b48179f0b0a\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",
