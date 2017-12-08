@@ -27,11 +27,11 @@ public class HistoryItem {
         this.uri = uri;
         Date date = new Date();
         this.datetime_epoch = (Long) date.getTime();
-        this.datetime_human = getHumanTime(this.datetime_epoch);
+        this.datetime_human = passHumanTime(this.datetime_epoch);
 
     }
 
-    private String getHumanTime(Long t){
+    private String passHumanTime(Long t){
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         return dateFormat.format(t);
     }

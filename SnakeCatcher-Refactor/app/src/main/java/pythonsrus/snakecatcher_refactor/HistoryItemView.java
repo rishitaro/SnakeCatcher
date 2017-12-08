@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class HistoryItemView extends RecyclerView.ViewHolder {
     public TextView date;
     public TextView url;
+    private String TAG = "HistoryItemView";
 
     public HistoryItemView(View itemView){
         super(itemView);

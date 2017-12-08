@@ -41,49 +41,12 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
     private DatabaseReference databaseReference;
     private GoogleApiClient mGoogleApiClient;
     private FirebaseRecyclerAdapter mAdapter;
+    private String TAG = "HistoryView";
+    private String uid = "";
+    private String email = "";
 
     @BindView(R.id.db)
     RecyclerView recyclerView;
-
-
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_camera:
-                    //mTextMessage.setText(R.string.title_camera);
-                    startActivity(new Intent(HistoryView.this, Camera.class));
-                    return true;
-                case R.id.navigation_history:
-
-                    return true;
-                case R.id.navigation_settings:
-                    Bundle extras = getIntent().getExtras();
-                    String email, name = "";
-
-                    if(extras != null){
-                        email = extras.getString("email");
-                        name = extras.getString("name");
-                        Log.v("history", "name: " + name);
-                        Log.v("history", "email: " + email);
-
-                        Intent settings = new Intent(getApplicationContext(), Settings.class);
-                        settings.putExtra("email", email);
-                        settings.putExtra("email", email);
-                        settings.putExtra("name", name);
-                        startActivity(settings);
-                    }else{
-                        startActivity(new Intent(HistoryView.this, Settings.class));
-                    }
-
-                    return true;
-            }
-            return false;
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,11 +62,11 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
         mGoogleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this,this).addApi(Auth.GOOGLE_SIGN_IN_API,signInOptions).build();
 
         OptionalPendingResult<GoogleSignInResult> opr = Auth.GoogleSignInApi.silentSignIn(mGoogleApiClient);
-        String uid = "";
         if(opr.isDone()){
             GoogleSignInResult result = opr.get();
             uid = result.getSignInAccount().getId();
-            Log.v("HistoryView", "uid = " + uid);
+            email = result.getSignInAccount().getEmail();
+            Log.v(TAG, "uid = " + uid);
         }
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -113,38 +76,40 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
 
         recyclerView = (RecyclerView) findViewById(R.id.db);
 
-
         Query query = FirebaseDatabase.getInstance()
                 .getReference()
                 .child(uid)
+                .child("motion activity")
                 .limitToLast(50);
 
-        FirebaseRecyclerOptions<HistoryItem> options =
-                new FirebaseRecyclerOptions.Builder<HistoryItem>()
-                    .setQuery(query, HistoryItem.class)
+        FirebaseRecyclerOptions<MotionItem> options =
+                new FirebaseRecyclerOptions.Builder<MotionItem>()
+                    .setQuery(query, MotionItem.class)
                     .build();
 
-        mAdapter = new FirebaseRecyclerAdapter<HistoryItem, HistoryItemView>(options){
+        mAdapter = new FirebaseRecyclerAdapter<MotionItem, MotionItemView>(options){
 
             @Override
-            public HistoryItemView onCreateViewHolder(ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_history_item_view, parent, false);
-                return new HistoryItemView(view);
+            public MotionItemView onCreateViewHolder(ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_motion_item_view, parent, false);
+                return new MotionItemView(view);
             }
 
             @Override
-            protected void onBindViewHolder(HistoryItemView holder, int position, HistoryItem model) {
+            protected void onBindViewHolder(MotionItemView holder, int position, MotionItem model) {
                 holder.bind(model);
             }
 
             @Override
             public void onDataChanged(){
-                Log.v("historyview" , "what the fuck man");
+                Log.v(TAG , "In onDataChanged");
             }
         };
 
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
+        llm.setReverseLayout(true);
+        llm.setStackFromEnd(true);
         recyclerView.setLayoutManager(llm);
         recyclerView.setAdapter(mAdapter);
 
@@ -156,11 +121,6 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
         super.onStart();
         mGoogleApiClient.connect();
         mAdapter.startListening();
-    }
-
-    private void writeNewHistoryItem(String uid, String uri){
-        HistoryItem item = new HistoryItem(uid, uri);
-        databaseReference.child(uid).child(item.getDatetime().toString()).setValue(item);
     }
 
     @Override
@@ -178,6 +138,34 @@ public class HistoryView extends AppCompatActivity implements View.OnClickListen
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
+
+    private void writeNewHistoryItem(String uid, String uri){
+        HistoryItem item = new HistoryItem(uid, uri);
+        databaseReference.child(uid).child("login activity").child(item.getDatetime().toString()).setValue(item);
+    }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.navigation_motion:
+                    Intent i = new Intent(getApplicationContext(), MotionDetection.class);
+                    i.putExtra("uid", uid);
+                    i.putExtra("email", email);
+                    startActivity(i);
+                    return true;
+                case R.id.navigation_history:
+                    return true;
+                case R.id.navigation_settings:
+                    startActivity(new Intent(HistoryView.this, Settings.class));
+                    return true;
+            }
+            return false;
+        }
+    };
+
 
 
 }
