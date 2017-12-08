@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SnakeCatcher2</string>
+    <string name="app_name">SnakeCatcher</string>
     <string name="title_text">Google Sign-In\nQuickstart</string>
 
     <!-- Sign-in status messages -->
@@ -54,7 +54,7 @@
          from https://console.developers.google.com/ -->
     <string name="server_client_id">546506255985-hlgdsf9hvdipdldsumh757m82pimb725.apps.googleusercontent.com</string>
     <string name="title_activity_list_view">ListView</string>
-    <string name="title_camera">Camera</string>
+    <string name="title_motion">Motion</string>
     <string name="title_history">History</string>
     <string name="title_settings">Settings</string>
     <string name="title_activity_settings">Settings</string>
