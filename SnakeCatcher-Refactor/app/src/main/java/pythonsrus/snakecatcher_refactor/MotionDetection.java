@@ -16,6 +16,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.Manifest;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationManager;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -29,6 +39,8 @@ public class MotionDetection extends Activity {
     private DatabaseReference databaseReference;
     String uid = "";
     String email = "";
+    static final int REQUEST_LOCATION = 1;
+    LocationManager locationManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +54,9 @@ public class MotionDetection extends Activity {
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+        getLocation();
     }
 
     private void writeNewMotionItem(String uid, MotionItem item){
@@ -173,4 +188,40 @@ public class MotionDetection extends Activity {
             return false;
         }
     };
+
+    void getLocation() {
+        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_LOCATION);
+        } else {
+            Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+
+            if (location != null){
+                final double latitude = location.getLatitude();
+                final double longitude = location.getLongitude();
+                new Thread(new Runnable() {
+                    public void run() {
+                        try {
+                            GMAILSender sender = new GMAILSender("snakecatcherapp@gmail.com", "cmps115struggle");
+                            sender.sendMail("Test mail",  "https://www.google.com/maps/search/?api=1&query="+latitude + "," +longitude, "snakecatcherapp@gmail.com","snakecatcherapp@gmail.com" );
+                        } catch (Exception e) {
+                            Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }).start();
+            } else {
+            }
+        }
+    }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,@NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        switch (requestCode) {
+            case REQUEST_LOCATION:
+                getLocation();
+                break;
+        }
+    }
 }

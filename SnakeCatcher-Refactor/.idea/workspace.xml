@@ -129,19 +129,18 @@
       <file leaf-file-name="MotionDetection.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/pythonsrus/snakecatcher_refactor/MotionDetection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="894">
-              <caret line="144" column="25" lean-forward="false" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
+            <state relative-caret-position="816">
+              <caret line="225" column="5" lean-forward="false" selection-start-line="225" selection-start-column="5" selection-end-line="225" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2001#2342#0" expanded="true" />
-                <element signature="e#2341#2342#0" expanded="true" />
-                <element signature="e#2396#2936#0" expanded="true" />
-                <element signature="e#2935#2936#0" expanded="true" />
-                <element signature="e#4243#4994#0" expanded="true" />
-                <element signature="e#4993#4994#0" expanded="true" />
-                <element signature="e#5098#5306#0" expanded="true" />
-                <element signature="e#5628#6288#0" expanded="true" />
-                <element signature="e#6287#6288#0" expanded="true" />
+                <element signature="e#2559#2900#0" expanded="true" />
+                <element signature="e#2899#2900#0" expanded="true" />
+                <element signature="e#2954#3494#0" expanded="true" />
+                <element signature="e#3493#3494#0" expanded="true" />
+                <element signature="e#4801#5552#0" expanded="true" />
+                <element signature="e#5551#5552#0" expanded="true" />
+                <element signature="e#5656#5864#0" expanded="true" />
+                <element signature="e#5863#5864#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2221,7 +2220,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="device.picker.selection" value="7f061bc9" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../MyApp" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/rishitaroy/Code/UCSC/cs115/SnakeCatcher/SnakeCatcher-Refactor/app/src/main/java/pythonsrus/snakecatcher_refactor/HistoryView.java" />
     <property name="android.profiler.active" value="true" />
     <property name="VectorAssetImportPath" value="$PROJECT_DIR$/../../.." />
@@ -2317,7 +2316,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512754857382" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512755206749" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2365,7 +2364,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512754857382" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512755206749" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2397,6 +2396,27 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -2527,7 +2547,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512754857383" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1512755206749" />
       </method>
     </configuration>
     <list size="1">
@@ -3021,19 +3041,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/pythonsrus/snakecatcher_refactor/MotionDetection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="894">
-          <caret line="144" column="25" lean-forward="false" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="25" />
+        <state relative-caret-position="816">
+          <caret line="225" column="5" lean-forward="false" selection-start-line="225" selection-start-column="5" selection-end-line="225" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2001#2342#0" expanded="true" />
-            <element signature="e#2341#2342#0" expanded="true" />
-            <element signature="e#2396#2936#0" expanded="true" />
-            <element signature="e#2935#2936#0" expanded="true" />
-            <element signature="e#4243#4994#0" expanded="true" />
-            <element signature="e#4993#4994#0" expanded="true" />
-            <element signature="e#5098#5306#0" expanded="true" />
-            <element signature="e#5628#6288#0" expanded="true" />
-            <element signature="e#6287#6288#0" expanded="true" />
+            <element signature="e#2559#2900#0" expanded="true" />
+            <element signature="e#2899#2900#0" expanded="true" />
+            <element signature="e#2954#3494#0" expanded="true" />
+            <element signature="e#3493#3494#0" expanded="true" />
+            <element signature="e#4801#5552#0" expanded="true" />
+            <element signature="e#5551#5552#0" expanded="true" />
+            <element signature="e#5656#5864#0" expanded="true" />
+            <element signature="e#5863#5864#0" expanded="true" />
           </folding>
         </state>
       </provider>
